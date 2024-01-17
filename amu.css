@@ -1,0 +1,76 @@
+/* Gaya Untuk Navbar Kategori */
+nav ul li.dropdown {
+    position: relative;
+}
+
+nav ul li.dropdown ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #2f8ce9;
+    border-radius: 0 0 5px 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    z-index: 999;
+}
+
+nav ul li.dropdown:hover ul {
+    display: block;
+}
+
+nav ul li.dropdown ul li {
+    display: block;
+    text-align: center;
+}
+
+nav ul li.dropdown ul li a {
+    color: white;
+    padding: 10px;
+    text-decoration: none;
+    display: block;
+    transition: 0.2s;
+}
+
+nav ul li.dropdown ul li a:hover {
+    background-color: #1c67af;
+}
+
+/* Gaya Tambahan untuk Navbar */
+nav ul li.search-container {
+    margin-left: auto;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+    nav ul li:not(.dropdown) {
+        display: none;
+    }
+
+    nav ul li.search-container {
+        display: block;
+        margin-left: 0;
+        margin-top: 10px;
+    }
+
+    nav ul li.icon {
+        float: right;
+        display: block;
+    }
+
+    nav ul li.icon a {
+        display: block;
+        padding: 10px;
+        text-align: center;
+    }
+
+    nav ul li.dropdown ul {
+        position: static;
+        display: none;
+        background-color: transparent;
+        box-shadow: none;
+    }
+
+    nav ul li.dropdown:hover ul {
+        display: none;
+    }
+}

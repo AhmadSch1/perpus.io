@@ -1,0 +1,48 @@
+<!-- Konten Halaman Pinjam -->
+<<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>pinjaman</title>
+    <link rel="stylesheet" href="jawa.css">
+</head>
+<body>
+
+</body>
+
+<section class="pinjam-section">
+    <h2>Formulir Peminjaman Buku</h2>
+    <p>Silakan isi formulir di bawah untuk melakukan peminjaman buku:</p>
+
+    <form class="pinjam-form" action="proses_pinjam.php" method="post" onsubmit="return showSuccessMessage()">
+        <!-- Isi formulir -->
+        <label for="nama">Nama Lengkap:</label>
+        <input type="text" id="nama" name="nama" required>
+
+        <!-- Tambahan: Tambahkan ID ke elemen formulir untuk merujuknya dari JavaScript -->
+        <label for="judul-buku">Judul Buku:</label>
+        <input type="text" id="judul-buku" name="judul-buku" required>
+
+        <label for="tgl-pinjam">Tanggal Peminjaman:</label>
+        <input type="date" id="tgl-pinjam" name="tgl-pinjam" required>
+
+        <button type="submit">Submit Peminjaman</button>
+    </form>
+
+    <!-- Tambahan: Elemen untuk menampilkan pesan berhasil -->
+    <div id="success-message" style="display: none; color: green; margin-top: 10px;">
+        Peminjaman berhasil! Terima kasih.
+    </div>
+</section>
+
+<!-- Tambahan: JavaScript untuk menampilkan pesan berhasil -->
+<script>
+    function showSuccessMessage() {
+        // Tampilkan pesan berhasil
+        document.getElementById("success-message").style.display = "block";
+        // Mencegah formulir untuk mengirim data (untuk keperluan contoh)
+        return false;
+    }
+</script>
+</html>
